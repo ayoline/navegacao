@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TelaSecundaria extends StatefulWidget {
-  const TelaSecundaria({Key? key}) : super(key: key);
+//  const TelaSecundaria({Key? key}) : super(key: key);
+
+  String valor;
+  TelaSecundaria({required this.valor});
 
   @override
   _TelaSecundariaState createState() => _TelaSecundariaState();
@@ -18,7 +21,9 @@ class _TelaSecundariaState extends State<TelaSecundaria> {
       body: Container(
         padding: EdgeInsets.all(32),
         child: Column(
-          children: <Widget>[Text("Segunda Tela")],
+          children: <Widget>[
+            Text("Segunda Tela, valor passado: ${widget.valor}")
+          ],
         ),
       ),
     );

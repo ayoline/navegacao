@@ -3,6 +3,7 @@ import 'package:navegacao/TelaSecundaria.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: TelaPrincipal(),
   ));
 }
@@ -28,8 +29,12 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           children: <Widget>[
             ElevatedButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TelaSecundaria()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TelaSecundaria(
+                              valor: "Anderson",
+                            )));
               },
               child: Text("ir para a segunda tela "),
             )
